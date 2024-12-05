@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORBIT.JJ SHOP</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5fa; /* Light gray for contrast with purple elements */
+            color: #2d2d34; /* Soft dark gray for text */
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(90deg, #ae52d4, #d4a5f9); /* Purple to light purple gradient */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 500;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #fbeaff; /* Subtle lighter hover effect */
+            transform: scale(1.1);
+        }
+
+        /* Home Section */
+        .home-section {
+            text-align: center;
+            padding: 120px 20px;
+            background: linear-gradient(to bottom, #ae52d4, #d4a5f9); /* Purple to light purple gradient */
+            color: white;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .home-section h2 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .home-section p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+        }
+
+        .btn-primary {
+            padding: 15px 35px;
+            background-color: #fbeaff; /* Soft light purple */
+            color: #6a0dad; /* Deep purple text */
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: #d4a5f9;
+            color: white;
+            box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Shop Section */
+        .shop-section {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #f5f5fa; /* Light gray for better contrast */
+        }
+
+        .shop-section h2 {
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+            color: #6a0dad;
+        }
+
+        .product-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            justify-items: center;
+        }
+
+        .product-card {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            text-align: center;
+            width: 260px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .product-card h3 {
+            font-size: 1.5rem;
+            margin: 15px 0;
+            color: #6a0dad;
+        }
+
+        .price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 10px 0;
+            color: #ae52d4;
+        }
+
+        .buy-button {
+            padding: 10px 20px;
+            background-color: #ae52d4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .buy-button:hover {
+            background-color: #6a0dad;
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(90deg, #d4a5f9, #ae52d4); /* Light purple to purple */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: #fbeaff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ORBIT.JJ SHOP</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="https://discord.gg/RFm9wPgP7G" target="_blank">Discord</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="home-section">
+        <h2>Orbit.JJ: Cheap & Easy Tokens</h2>
+        <p>Trusted by over 500 satisfied users. Secure, reliable, and fast.</p>
+        <a href="#shop" class="btn-primary">Explore Products</a>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop" class="shop-section">
+        <h2>Shop Our Products</h2>
+        <div class="product-container">
+            <div class="product-card">
+                <h3>Normal Tokens</h3>
+                <p class="price">$0.99</p>
+                <button class="buy-button" onclick="checkout('Normal Tokens')">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <h3>Nitro Tokens</h3>
+                <p class="price">$1.12</p>
+                <button class="buy-button" onclick="checkout('Nitro Tokens')">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <h3>Ticket Bot</h3>
+                <p class="price">$5.00</p>
+                <button class="buy-button" onclick="checkout('Ticket Bot')">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <h3>Manager Bot</h3>
+                <p class="price">$7.00</p>
+                <button class="buy-button" onclick="checkout('Manager Bot')">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <h3>Token Checker</h3>
+                <p class="price">$3.50</p>
+                <button class="buy-button" onclick="checkout('Token Checker')">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <h3>Token Nuker</h3>
+                <p class="price">$10.00</p>
+                <button class="buy-button" onclick="checkout('Token Nuker')">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <h3>Custom Tool</h3>
+                <p>DM ORBITHELPBOT for pricing</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 ORBIT.JJ SHOP</p>
+        <p>For issues, <a href="https://discord.gg/RFm9wPgP7G" target="_blank">join our Discord</a>.</p>
+    </footer>
+
+    <script>
+        function checkout(product) {
+            alert(`To purchase ${product}:\n\n1. Pay using CashApp at https://cash.app/$jupiter9099\n2. Join our Discord: https://discord.gg/RFm9wPgP7G\n3. Show proof of purchase to receive your item!`);
+        }
+    </script>
+</body>
+</html>
